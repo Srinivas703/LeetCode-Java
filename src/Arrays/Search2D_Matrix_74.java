@@ -7,9 +7,31 @@ public class Search2D_Matrix_74 {
 				         {10,11,16,20},
 				         {23,30,34,60}
 				         };
-		int target=553;
+		int target=3;
 		System.out.println(searchMatrix(matrix,target));
+		System.out.println(searchMatrix_Method2(matrix,target));
 
+	}
+
+ public static int searchMatrix_Method2(int[][] matrix, int target) {
+	 int rows=matrix.length;
+	 int cols=matrix[0].length-1;
+		int start=0;
+		int end=rows*cols-1;
+		while(start<=end) {
+			int mid=start+(end-start)/2 ;
+			int row= mid/cols ;
+			int col=mid%cols ;
+			if(target==matrix[row][col]) return target ;
+			if(target<matrix[row][col]) {
+				end=mid-1;
+			}else {
+				start=mid+1;
+			}
+					
+			
+		}
+		return -1;
 	}
 
  public static boolean searchMatrix(int[][] matrix, int target) {

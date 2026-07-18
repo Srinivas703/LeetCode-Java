@@ -1,4 +1,4 @@
-package Arrays;
+package BinarySearch;
 
 public class Search_2D_matrix_240 {
 
