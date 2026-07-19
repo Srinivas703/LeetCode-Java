@@ -7,7 +7,7 @@ public class FindingRange {
     public static void main(String[] args) {
 
         int[] arr = {1, 2, 4, 4, 4, 5, 5, 6};
-        int target = 4;
+        int target = 5;
 
         System.out.println(Arrays.toString(searchRange(arr, target)));
     }
@@ -16,7 +16,7 @@ public class FindingRange {
 
         int[] ans = {-1, -1};
 
-        ans[0] = search(arr, target, true);   // First occurrence
+        ans[0] = search(arr, target, true);  // First occurrence
         ans[1] = search(arr, target, false);  // Last occurrence
 
         return ans;
@@ -44,7 +44,7 @@ public class FindingRange {
                 ans = mid;
 
                 if (findFirstIndex) {
-                    end = mid - 1;      // Continue searching left
+                    end = mid - 1;     // Continue searching left
                 } else {
                     start = mid + 1;    // Continue searching right
                 }
