@@ -10,7 +10,7 @@ public class Search_2D_matrix_240 {
 				      {10,13,14,17,24},
 				      {18,21,23,26,30}
 				     };
-		int target = 5;
+		int target = 6;
 		System.out.println(Search(arr,target));
 
 	}
